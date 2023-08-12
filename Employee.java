@@ -1,11 +1,11 @@
 class Employee {
     private String name;
-    private int DOB;
+    private String DOB;
     private int age;
     private double income;
     private double occ_rate;
 
-    public Employee(String name, int DOB, int age, double income, double occ_rate) {
+    public Employee(String name, String DOB, int age, double income, double occ_rate) {
         this.name = name;
         this.DOB = DOB;
         this.age = age;
@@ -15,7 +15,7 @@ class Employee {
 
     public Employee(String name, int DOB, int age) {
         this.name = name;
-        this.DOB = DOB;
+        this.DOB = String.valueOf(DOB);
         this.age = age;
     }
 
@@ -31,7 +31,7 @@ class Employee {
         return name;
     }
 
-    public int getDOB() {
+    public String getDOB() {
         return DOB;
     }
 
