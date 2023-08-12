@@ -47,9 +47,4 @@ class Employee {
         return occ_rate;
     }
 
-    public String getEmployeeInfo() {
-        return "Name: " + name + "\nDOB: " + DOB + "\nAge: " + age +
-                "\nIncome: " + income + "\nOccupation Rate: " + occ_rate + "%";
-    }
-
 }
