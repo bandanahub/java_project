@@ -1,52 +1,21 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
-
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        //Test part 1
+        System.out.println("Test 1: ");
+        var management = new Management();
+        management.hireTest1();
 
-        System.out.print("Enter the name: ");
-        String name = scanner.nextLine();
+        // Test part 2
+        System.out.println("Test 2: ");
+        System.out.println("Employees description: ");
+        management.hireTest2();
 
-        System.out.print("Enter the date of birth (YYYY-MM-DD): ");
-        String dobInput = scanner.nextLine();
-        int age = calculateAge(dobInput);
-
-        System.out.print("Enter the income: ");
-        double income = scanner.nextDouble();
-
-        System.out.print("Enter the occupation rate: ");
-        double occ_rate = scanner.nextDouble();
-
-        Employee infemployee = new Employee(name, dobInput, age, income, occ_rate);
-
-        scanner.close();
-
-        System.out.println("Employee Information:");
-        System.out.println(infemployee.getEmployeeInfo());
+        // Test part 3
+        System.out.println("Test 3: ");
+        System.out.println("Employees description: ");
+        management.hireTest3();
+        }
     }
 
-    public static int calculateAge(String dobInput) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date dob;
-        try {
-            dob = dateFormat.parse(dobInput);
-        } catch (ParseException e) {
-            System.out.println("Invalid date format. Please use YYYY-MM-DD format.");
-            return -1; // Return a placeholder value to indicate an error
-        }
-
-        Date currentDate = new Date();
-        int years = currentDate.getYear() - dob.getYear();
-        int months = currentDate.getMonth() - dob.getMonth();
-        int days = currentDate.getDate() - dob.getDate();
-
-        if (months < 0 || (months == 0 && days < 0)) {
-            years--;
-        }
-
-        return years;
-    }
-}
