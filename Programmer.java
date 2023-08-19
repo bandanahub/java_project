@@ -14,6 +14,16 @@ public class Programmer  extends Employee{
         this.no_projects = no_projects;
     }
 
+    public Programmer(String name, int birthYear, double income, double occRate, int no_projects, Car car) {
+        super(name, birthYear, income, occRate);
+        this.no_projects = no_projects;
+    }
+
+    public Programmer(String name, int birthYear, double income, double occRate, int no_projects, Motorcycle motor) {
+        super(name, birthYear, income, occRate);
+        this.no_projects = no_projects;
+    }
+
     public int getNo_projects() {
         return no_projects;
     }
@@ -31,3 +41,4 @@ public class Programmer  extends Employee{
 //                '}';
     }
 }
+
