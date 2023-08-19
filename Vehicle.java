@@ -1,4 +1,4 @@
-public class Vehicle {
+public class Vehicle extends Employee{
     private String  make;
     private String plate;
     private String color;
