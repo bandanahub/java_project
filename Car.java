@@ -1,35 +1,35 @@
 public class Car extends Vehicle{
-    private String gear;
-    private String type;
+    private String Gear;
+    private String VehicleType;
 
     public String getGear() {
-        return gear;
+        return Gear;
     }
 
-    public void setGear(String gear) {
-        this.gear = gear;
+    public void setGear(String Gear) {
+        this.Gear = Gear;
     }
 
     public String getType() {
-        return type;
+        return VehicleType;
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.VehicleType = VehicleType;
     }
 
     public Car() {
     }
 
-    public Car(String gear, String type) {
-        this.gear = gear;
-        this.type = type;
+    public Car(String Gear, String type) {
+        this.Gear = Gear;
+        this.VehicleType = VehicleType;
     }
 
-    public Car(String make, String plate, String color, String category, String gear, String type) {
+    public Car(String make, String plate, String color, String category, String Gear, String type) {
         super(make, plate, color, category);
-        this.gear = gear;
-        this.type = type;
+        this.Gear = Gear;
+        this.VehicleType = VehicleType;
     }
 
     @Override
@@ -38,8 +38,8 @@ public class Car extends Vehicle{
                 "plate -" + super.getPlate() + "\n" +
                 "color" + super.getColor() + "\n" +
                 "category" +super.getCategory() + "\n" +
-                "Gear" + this.gear + "\n" +
-                "Type" + this.type + "\n" +
+                "Gear" + this.Gear + "\n" +
+                "Type" + this.VehicleType + "\n" +
         '}';
     }
 }
