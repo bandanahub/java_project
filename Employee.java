@@ -21,6 +21,14 @@ public class Employee {
 
     }
 
+    public Employee(String name, int birthYear, double income, double occRate, int travelday, int new_clients, String make, String plate, String color, String category) {
+        this.name = name;
+        this.birthYear = birthYear;
+        this.income = income;
+        setOccRate(occRate);
+
+    }
+
     public String getName() {
         return name;
     }
