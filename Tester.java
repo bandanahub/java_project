@@ -21,8 +21,15 @@ public class Tester extends Employee {
         this.numberOfBugsFound = numberOfBugsFound;
     }
 
+    public Tester(String name, int birthYear, double income, double occRate, int numberOfBugsFound, Motorcycle motor) {
+        super(name, birthYear, income, occRate);
+        this.numberOfBugsFound = numberOfBugsFound;
+    }
     @Override
     public String toString() {
         return "We have a new employee : "+ super.getName()+ ","+ " a tester.";
+//                "Age - " + super.getAge() + "\n"+
+//                super.getName() + "has an employment rate :" + super.getOccRate() + "%" + " and corrected " +this.numberOfBugsFound +" bugs."+
+//                '}';
     }
 }
