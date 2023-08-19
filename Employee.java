@@ -6,6 +6,8 @@ public class Employee {
     private double income;
     private double occRate;
 
+
+
     public Employee() {
        //empty constructor
     }
