@@ -32,6 +32,10 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-        return "We have a new employee: " + super.getName() + "," +" a manager." ;
+        return "We have a new employee: " + super.getName() + "," +" a manager.";
+//                "Age - " + super.getAge()+
+//                super.getName() + "has an employment rate :" + super.getOccRate() + "%" + " travelled " +this.travelday +" days and has brought " +this.new_clients+" clients."+
+//                '}';
+
     }
 }
