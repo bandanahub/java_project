@@ -1,19 +1,29 @@
-public class Programmer extends Employee {
-    private int linesOfCode;
+public class Programmer  extends Employee{
+    private int no_projects;
 
-    public Programmer(String name, int birthYear, int age, double income, int linesOfCode) {
-        super(name, birthYear, age, income);
-        this.linesOfCode = linesOfCode;
+
+    public Programmer() {
     }
 
-    public Programmer(String name, int birthYear, int age, double income, int linesOfCode, Vehicle vehicle) {
-        super(name, birthYear, age, income, vehicle);
-        this.linesOfCode = linesOfCode;
+    public Programmer(int no_projects) {
+        this.no_projects = no_projects;
+    }
+
+    public Programmer(String name, int birthYear, double income, double occRate, int no_projects) {
+        super(name, birthYear, income, occRate);
+        this.no_projects = no_projects;
+    }
+
+    public int getNo_projects() {
+        return no_projects;
+    }
+
+    public void setNo_projects(int no_projects) {
+        this.no_projects = no_projects;
     }
 
     @Override
     public String toString() {
-        return "Programmer: " + super.toString() + " - Lines of Code: " + linesOfCode;
+        return "We have a new employee : " + super.getName() + "," + " a programmer.";
     }
 }
-
