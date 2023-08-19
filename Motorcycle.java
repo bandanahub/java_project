@@ -1,58 +1,33 @@
-public class Vehicle extends Employee{
-    private String  make;
-    private String plate;
-    private String color;
-    private String category;
+public class Motorcycle extends Vehicle{
+    private Boolean sidecar;
 
-    public String getMake() {
-        return make;
+    public Motorcycle() {
     }
 
-    public void setMake(String make) {
-        this.make = make;
+    public Boolean getSidecar() {
+        return sidecar;
     }
 
-    public String getPlate() {
-        return plate;
+    public void setSidecar(Boolean sidecar) {
+        this.sidecar = sidecar;
     }
 
-    public void setPlate(String plate) {
-        this.plate = plate;
+    public Motorcycle(Boolean sidecar) {
+        this.sidecar = sidecar;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public Vehicle() {
-    }
-
-    public Vehicle(String make, String plate, String color, String category) {
-        this.make = make;
-        this.plate = plate;
-        this.color = color;
-        this.category = category;
+    public Motorcycle(String make, String plate, String color, String category, Boolean sidecar) {
+        super(make, plate, color, category);
+        this.sidecar = sidecar;
     }
 
     @Override
     public String toString() {
-        return "Vehicle{" +
-                "make='" + make + '\'' +
-                ", plate='" + plate + '\'' +
-                ", color='" + color + '\'' +
-                ", category='" + category + '\'' +
+        return "Employee has a motorcycle :" + "make - " + super.getMake()  + "\n" +
+                "plate -" + super.getPlate() + "\n" +
+                "color" + super.getColor()  + "\n" +
+                "category" +super.getCategory() + "\n"+
+                "SideCar" + this.sidecar +   "\n" +
                 '}';
     }
 }
