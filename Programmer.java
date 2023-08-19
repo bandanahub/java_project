@@ -24,6 +24,10 @@ public class Programmer  extends Employee{
 
     @Override
     public String toString() {
-        return "We have a new employee : " + super.getName() + "," + " a programmer.";
+        return "We have a new employee : " + super.getName() + "," + " a programmer." ;
+//                "Age - " + super.getAge() +
+//                super.getName() + "has an employment rate :" + super.getOccRate() + "%" + " and completed " +this.no_projects +" projects."+
+
+//                '}';
     }
 }
