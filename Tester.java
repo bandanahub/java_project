@@ -1,18 +1,28 @@
-ublic class Tester extends Employee {
+public class Tester extends Employee {
     private int numberOfBugsFound;
 
-    public Tester(String name, int birthYear, int age, double income, int numberOfBugsFound) {
-        super(name, birthYear, age, income);
+    public int getNumberOfBugsFound() {
+        return numberOfBugsFound;
+    }
+
+    public void setNumberOfBugsFound(int numberOfBugsFound) {
         this.numberOfBugsFound = numberOfBugsFound;
     }
 
-    public Tester(String name, int birthYear, int age, double income, int numberOfBugsFound, Vehicle vehicle) {
-        super(name, birthYear, age, income, vehicle);
+    public Tester() {
+    }
+
+    public Tester(int numberOfBugsFound) {
+        this.numberOfBugsFound = numberOfBugsFound;
+    }
+
+    public Tester(String name, int birthYear, double income, double occRate, int numberOfBugsFound) {
+        super(name, birthYear, income, occRate);
         this.numberOfBugsFound = numberOfBugsFound;
     }
 
     @Override
     public String toString() {
-        return "Tester: " + super.toString() + " - Bugs Found: " + numberOfBugsFound;
+        return "We have a new employee : "+ super.getName()+ ","+ " a tester.";
     }
 }
