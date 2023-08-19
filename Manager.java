@@ -1,18 +1,37 @@
 public class Manager extends Employee {
-    private int numSubordinates;
+    private int travelday;
+    private int new_clients;
 
-    public Manager(String name, int birthYear, int age, double income, int numSubordinates) {
-        super(name, birthYear, age, income);
-        this.numSubordinates = numSubordinates;
+    public Manager(){}
+
+    public Manager(int travelday, int new_clients){
+        this.travelday = travelday;
+        this.new_clients = new_clients;
+    }
+    public Manager(String name, int birthYear, double income, double occRate, int travelday, int new_clients){
+        super(name, birthYear, income, occRate);
+        this.travelday = travelday;
+        this.new_clients = new_clients;
+    }
+    public int getTravelday() {
+        return travelday;
     }
 
-    public Manager(String name, int birthYear, int age, double income, int numSubordinates, Vehicle vehicle) {
-        super(name, birthYear, age, income, vehicle);
-        this.numSubordinates = numSubordinates;
+    public void setTravelday(int travelday) {
+        this.travelday = travelday;
     }
+
+    public int getNew_clients() {
+        return new_clients;
+    }
+
+    public void setNew_clients(int new_clients) {
+        this.new_clients = new_clients;
+    }
+
 
     @Override
     public String toString() {
-        return "Manager: " + super.toString() + " - Number of Subordinates: " + numSubordinates;
+        return "We have a new employee: " + super.getName() + "," +" a manager." ;
     }
 }
