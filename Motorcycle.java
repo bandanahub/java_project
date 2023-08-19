@@ -1,33 +1,58 @@
-public class Motorcycle extends Vehicle{
-    private String sidecar;
+public class Vehicle extends Employee{
+    private String  make;
+    private String plate;
+    private String color;
+    private String category;
 
-    public Motorcycle() {
+    public String getMake() {
+        return make;
     }
 
-    public String getSidecar() {
-        return sidecar;
+    public void setMake(String make) {
+        this.make = make;
     }
 
-    public void setSidecar(String sidecar) {
-        this.sidecar = sidecar;
+    public String getPlate() {
+        return plate;
     }
 
-    public Motorcycle(String sidecar) {
-        this.sidecar = sidecar;
+    public void setPlate(String plate) {
+        this.plate = plate;
     }
 
-    public Motorcycle(String make, String plate, String color, String category, String sidecar) {
-        super(make, plate, color, category);
-        this.sidecar = sidecar;
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public Vehicle() {
+    }
+
+    public Vehicle(String make, String plate, String color, String category) {
+        this.make = make;
+        this.plate = plate;
+        this.color = color;
+        this.category = category;
     }
 
     @Override
     public String toString() {
-        return "Employee has a motorcycle :" + "make - " + super.getMake()  + "\n" +
-                "plate -" + super.getPlate() + "\n" +
-                "color" + super.getColor()  + "\n" +
-                "category" +super.getCategory() + "\n"+
-                "SideCar" + this.sidecar +   "\n" +
+        return "Vehicle{" +
+                "make='" + make + '\'' +
+                ", plate='" + plate + '\'' +
+                ", color='" + color + '\'' +
+                ", category='" + category + '\'' +
                 '}';
     }
 }
