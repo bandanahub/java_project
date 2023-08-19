@@ -1,50 +1,76 @@
-class Employee {
+import java.util.Calendar;
+
+public class Employee {
     private String name;
-    private String DOB;
-    private int age;
+    private int birthYear;
     private double income;
-    private double occ_rate;
+    private double occRate;
 
-    public Employee(String name, String DOB, int age, double income, double occ_rate) {
+    public Employee() {
+       //empty constructor
+    }
+
+
+    public Employee(String name, int birthYear, double income, double occRate) {
         this.name = name;
-        this.DOB = DOB;
-        this.age = age;
+        this.birthYear = birthYear;
         this.income = income;
-        this.occ_rate = occ_rate;
-    }
+        setOccRate(occRate);
 
-    public Employee(String name, int DOB, int age) {
-        this.name = name;
-        this.DOB = String.valueOf(DOB);
-        this.age = age;
-    }
-
-    public void setIncome(double income) {
-        this.income = income;
-    }
-
-    public void setOccupationRate(double occ_rate) {
-        this.occ_rate = occ_rate;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getDOB() {
-        return DOB;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getBirthYear() {
+        return birthYear;
+    }
+
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
     }
 
     public double getIncome() {
         return income;
     }
 
-    public double getOccupationRate() {
-        return occ_rate;
+    public void setIncome(double income) {
+        this.income = income;
     }
 
+    public double getOccRate() {
+        return occRate;
+    }
+
+
+
+
+    public int getAge() {
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        return currentYear - this.birthYear;
+    }
+
+
+    public void setOccRate(double occRate) {
+        if (occRate < 10.0) {
+            this.occRate = 10.0;
+        } else if (occRate > 100.0) {
+            this.occRate = 100.0;
+        } else {
+            this.occRate = occRate;
+        }
+    }
+
+
+    @Override
+    public String toString() {
+        return "Name: " + name + "\nBirth Year: " + birthYear + "\nAge: " + getAge() +
+                "\nIncome: " + income + "\nOccupation Rate: " + occRate + "%" ;
+
+    }
 }
